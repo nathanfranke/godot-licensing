@@ -1,4 +1,4 @@
-### [GodotLicensing](https://github.com/nathanfranke/godot-licensing) by nathanfranke
+# <img src="static/godot-licensing.svg" width=24> [GodotLicensing](https://github.com/nathanfranke/godot-licensing) by nathanfranke
 
 ### Usage
 
