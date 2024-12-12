@@ -1,18 +1,15 @@
-## [url=https://github.com/nathanfranke/godot-licensing]GodotLicensing[/url] by
-## nathanfranke
+## [url=https://github.com/nathanfranke/godot-licensing]GodotLicensing[/url] by nathanfranke
 ##
-## Use the [GodotLicensing] singleton to add custom copyrights and licenses.[br]
-## Use the [LicensingInterface] node to show all copyrights and licenses to
-## users.
+## Use the [GodotLicensing] singleton to add custom copyrights and licenses (see below).
+## [br]
+##
+## Use the [LicensingInterface] node to show all copyrights and licenses to users.
 ## [br][br]
 ##
-## [b]Note[/b]: It is recommended to set [code]display/window/stretch[/code]
-## such that licenses show on all platforms. For example, set [code]mode[/code]
-## to [code]canvas_items[/code] and [code]aspect[/code] to [code]stretch[/code].
+## [b]Note[/b]: It is recommended to set [code]display/window/stretch[/code] such that the full interface shows on all resolutions. For example, set [code]mode[/code] to [code]canvas_items[/code] and [code]aspect[/code] to [code]stretch[/code].
 ## [br][br]
 ##
-## [b]Note[/b]: [LicensingInterface] has a minimum size of
-## [code]256px[/code] × [code]256px[/code].
+## [b]Note[/b]: [LicensingInterface] has a minimum size of [code]256px[/code] × [code]256px[/code].
 ## [br][br]
 ##
 ## Example copyright with license:
@@ -55,8 +52,7 @@ var _custom_copyrights := []
 var _custom_licenses := {}
 
 
-## Adds a copyright. [code]license[/code] is optional. See [GodotLicensing] for
-## usage.
+## Adds a copyright. [code]license[/code] is optional. See [GodotLicensing] for usage.
 func add_copyright(copyright: Dictionary) -> void:
 	assert(copyright.has(&"name"), "Expected key: 'name'.")
 	assert(copyright.get(&"parts") is Array, "Expected array key: 'parts'.")
