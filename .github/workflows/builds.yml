@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       # TODO: Workaround artifact folder structure: https://github.com/actions/upload-artifact/issues/174
       - name: Copy README.md and LICENSE to addon and make a new directory for artifacts
-        shell: sh
+        shell: bash
         run: |
           for addon in ${{ github.workspace }}/addons/*/; do
             cp --update=none '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE' "$addon"
