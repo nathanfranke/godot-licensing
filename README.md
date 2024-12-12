@@ -1,5 +1,7 @@
 # <img src="static/godot-licensing.svg" width=24> [GodotLicensing](https://github.com/nathanfranke/godot-licensing) by nathanfranke
 
+Adds a preset interface that shows an interactive list of all licenses. Custom licenses can be added through the GodotLicensing singleton.
+
 ### Usage
 
 Use the `GodotLicensing` singleton to add custom copyrights and licenses. \
