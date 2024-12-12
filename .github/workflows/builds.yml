@@ -12,17 +12,15 @@ jobs:
       - name: Copy README.md and LICENSE to addon and make a new directory for artifacts
         shell: sh
         run: |
-          for addon in ${{ github.workspace }}/project/addons/*/; do
-            cp --no-clobber '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE' "$addon"
+          for addon in ${{ github.workspace }}/addons/*/; do
+            cp --update=none '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE' "$addon"
           done
-
           # Works around https://github.com/actions/upload-artifact/issues/174
-          mkdir ${{ github.workspace }}/${{ github.event.repository.name }}/
-          mv ${{ github.workspace }}/project/addons/ ${{ github.workspace }}/${{ github.event.repository.name }}/
-
+          mkdir --parents ${{ github.workspace }}/github-artifact/${{ github.event.repository.name }}/
+          mv ${{ github.workspace }}/addons/ ${{ github.workspace }}/github-artifact/${{ github.event.repository.name }}/
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.repository.name }}
           path: |
-            ${{ github.workspace }}/${{ github.event.repository.name }}/
+            ${{ github.workspace }}/github-artifact
