@@ -70,6 +70,7 @@ func add_copyright(copyright: Dictionary) -> void:
 func add_license(license: Dictionary) -> void:
 	assert(license.has(&"name"), "Expected key: 'name'.")
 	assert(license.has(&"text"), "Expected key: 'text'.")
+	assert(license.name not in _engine_licenses, "Overriding engine license '%s' is not allowed." % license.name)
 	_custom_licenses[license.name] = license.text
 
 
