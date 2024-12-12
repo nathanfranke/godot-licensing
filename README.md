@@ -1,6 +1,4 @@
-[GodotLicensing](https://github.com/nathanfranke/godot-licensing) by nathanfranke
-
-![example screenshot](https://raw.githubusercontent.com/nathanfranke/godot-licensing/refs/heads/main/static/example.png)
+### [GodotLicensing](https://github.com/nathanfranke/godot-licensing) by nathanfranke
 
 ### Usage
 
@@ -44,6 +42,10 @@ GodotLicensing.add_copyright({
     }],
 })
 ```
+
+### Screenshot
+
+![example screenshot](https://raw.githubusercontent.com/nathanfranke/godot-licensing/refs/heads/main/static/example.png)
 
 ### License
 
