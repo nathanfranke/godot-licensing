@@ -9,18 +9,23 @@ jobs:
     runs-on: ubuntu-24.04
     name: ${{ github.event.repository.name }}
     steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # TODO: Workaround artifact folder structure: https://github.com/actions/upload-artifact/issues/174
       - name: Copy README.md and LICENSE to addon and make a new directory for artifacts
         shell: sh
         run: |
           for addon in ${{ github.workspace }}/addons/*/; do
             cp --update=none '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE' "$addon"
           done
-          # Works around https://github.com/actions/upload-artifact/issues/174
-          mkdir --parents ${{ github.workspace }}/github-artifact/${{ github.event.repository.name }}/
-          mv ${{ github.workspace }}/addons/ ${{ github.workspace }}/github-artifact/${{ github.event.repository.name }}/
+          mkdir --parents ${{ github.workspace }}/github-artifact/${{ github.event.repository.name }}-${{ github.sha }}/
+          mv ${{ github.workspace }}/addons/ ${{ github.workspace }}/github-artifact/${{ github.event.repository.name }}-${{ github.sha }}/
+      # TODO: Simplify generating artifact names. See: https://github.com/orgs/community/discussions/26686
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.repository.name }}
+          name: ${{ github.event.repository.name }}-${{ github.event_name == 'pull_request' && format('pr{0}', github.event.number) || github.ref_name }}
           path: |
             ${{ github.workspace }}/github-artifact
