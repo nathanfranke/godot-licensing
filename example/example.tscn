@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc6qm3e2sdoev"]
+
+[ext_resource type="Script" path="res://example/example.gd" id="1_ibgjk"]
+[ext_resource type="Script" path="res://addons/godot_licensing/licensing_interface.gd" id="2_wwplw"]
+
+[node name="Example" type="Node"]
+script = ExtResource("1_ibgjk")
+
+[node name="ShowCopyrights" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 139.0
+offset_bottom = 35.0
+text = "Show copyrights"
+
+[node name="Window" type="Window" parent="."]
+title = "Copyrights"
+position = Vector2i(56, 56)
+size = Vector2i(400, 400)
+
+[node name="LicensingInterface" type="Control" parent="Window"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_wwplw")
+
+[connection signal="pressed" from="ShowCopyrights" to="." method="_on_show_copyrights_pressed"]
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
