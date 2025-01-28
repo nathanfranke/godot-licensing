@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dc6qm3e2sdoev"]
 
-[ext_resource type="Script" path="res://example/example.gd" id="1_ibgjk"]
-[ext_resource type="Script" path="res://addons/godot_licensing/licensing_interface.gd" id="2_wwplw"]
+[ext_resource type="Script" uid="uid://uswcm1e2q1cp" path="res://example/example.gd" id="1_ibgjk"]
+[ext_resource type="Script" uid="uid://c7ng50l8y6fyc" path="res://addons/godot_licensing/licensing_interface.gd" id="2_wwplw"]
 
 [node name="Example" type="Node"]
 script = ExtResource("1_ibgjk")

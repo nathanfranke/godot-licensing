@@ -12,12 +12,8 @@ config_version=5
 
 config/name="godot-licensing"
 run/main_scene="res://example/example.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://static/godot-licensing.svg"
-
-[autoload]
-
-GodotLicensing="*res://addons/godot_licensing/godot_licensing.gd"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://addons/godot_licensing/icons/icon.svg"
 
 [display]
 
@@ -28,7 +24,3 @@ window/size/window_width_override=512
 window/size/window_height_override=512
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_licensing/plugin.cfg")
