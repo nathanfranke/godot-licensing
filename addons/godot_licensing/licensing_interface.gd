@@ -15,6 +15,11 @@ func _get_minimum_size() -> Vector2:
 
 
 func _ready() -> void:
+	# Wait for parent nodes to populate custom copyrights and licenses on _ready.
+	_post_ready.call_deferred()
+
+
+func _post_ready() -> void:
 	var tab_container := TabContainer.new()
 	tab_container.add_child(_copyrights_container)
 	tab_container.add_child(_licenses_container)
@@ -22,9 +27,6 @@ func _ready() -> void:
 	tab_container.set_tab_title(1, "Licenses")
 	add_child(tab_container)
 	tab_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	
-	# Wait for parent nodes to populate custom copyrights and licenses on _ready.
-	await get_tree().process_frame
 	
 	var copyrights := GodotLicensing.get_copyrights()
 	for c in copyrights:
