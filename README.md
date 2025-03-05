@@ -16,10 +16,6 @@ Use the `GodotLicensing` singleton to add custom copyrights and licenses (see be
 Use the `LicensingInterface` node to show all copyrights and licenses to users. \
 </x-nul>
 
-**Note**: It is recommended to set `display/window/stretch` such that the full interface shows on all resolutions. For example, set `mode` to `canvas_items` and `aspect` to `stretch`.
-
-**Note**: `LicensingInterface` has a minimum size of `256px` × `256px`.
-
 ## examples
 
 Example copyright with license:
