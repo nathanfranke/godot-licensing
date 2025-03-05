@@ -7,9 +7,7 @@ extends Node
 @onready var window: Window = $Window
 
 
-func _ready() -> void:
-	window.hide()
-	
+static func _static_init() -> void:
 	GodotLicensing.add_copyright({
 		&"name": "Example",
 		&"parts": [{
@@ -23,6 +21,10 @@ func _ready() -> void:
 		&"name": "Example",
 		&"text": "Example text",
 	})
+
+
+func _ready() -> void:
+	window.hide()
 
 
 func _on_show_copyrights_pressed() -> void:

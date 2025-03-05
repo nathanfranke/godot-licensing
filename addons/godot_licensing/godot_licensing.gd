@@ -43,16 +43,16 @@
 ##})
 ## [/codeblock]
 @tool
-extends Node
+class_name GodotLicensing
 
 
-var _engine_copyrights := Engine.get_copyright_info()
-var _engine_licenses := Engine.get_license_info()
-var _custom_copyrights := []
-var _custom_licenses := {}
+static var _engine_copyrights := Engine.get_copyright_info()
+static var _engine_licenses := Engine.get_license_info()
+static var _custom_copyrights := []
+static var _custom_licenses := {}
 
 
-func _ready() -> void:
+static func _static_init() -> void:
 	# Some jurisdictions require attribution—even for public domain works.
 	# https://wikipedia.org/wiki/Moral_rights
 	var unlicense := preload("res://addons/godot_licensing/unlicense.tres")
@@ -69,7 +69,7 @@ func _ready() -> void:
 
 
 ## Adds a copyright. [code]license[/code] is optional. See [GodotLicensing] for usage.
-func add_copyright(copyright: Dictionary) -> void:
+static func add_copyright(copyright: Dictionary) -> void:
 	assert(copyright.has(&"name"), "Expected key: 'name'.")
 	assert(copyright.get(&"parts") is Array, "Expected array key: 'parts'.")
 	for part in copyright.parts:
@@ -79,7 +79,7 @@ func add_copyright(copyright: Dictionary) -> void:
 
 
 ## Adds a license. See [GodotLicensing] for usage.
-func add_license(license: Dictionary) -> void:
+static func add_license(license: Dictionary) -> void:
 	assert(license.has(&"name"), "Expected key: 'name'.")
 	assert(license.has(&"text"), "Expected key: 'text'.")
 	assert(license.name not in _engine_licenses, "Overriding engine license '%s' is not allowed." % license.name)
@@ -87,7 +87,7 @@ func add_license(license: Dictionary) -> void:
 
 
 ## Returns the full array of copyrights. [b]Not required for standard usage.[/b]
-func get_copyrights() -> Array[Dictionary]:
+static func get_copyrights() -> Array[Dictionary]:
 	var copyrights: Array[Dictionary]
 	copyrights.append_array(_custom_copyrights)
 	copyrights.append_array(_engine_copyrights)
@@ -95,7 +95,7 @@ func get_copyrights() -> Array[Dictionary]:
 
 
 ## Returns the full array of licenses. [b]Not required for standard usage.[/b]
-func get_licenses() -> Dictionary:
+static func get_licenses() -> Dictionary:
 	var licenses := {}
 	licenses.merge(_custom_licenses)
 	licenses.merge(_engine_licenses)
