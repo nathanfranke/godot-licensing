@@ -23,7 +23,7 @@ func _post_ready() -> void:
 	var tab_container := TabContainer.new()
 	tab_container.add_child(_copyrights_container)
 	tab_container.add_child(_licenses_container)
-	tab_container.set_tab_title(0, "Copyrights")
+	tab_container.set_tab_title(0, "Copyright")
 	tab_container.set_tab_title(1, "Licenses")
 	add_child(tab_container)
 	tab_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
