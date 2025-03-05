@@ -3,7 +3,8 @@ on:
   push:
   pull_request:
   workflow_dispatch:
-
+env:
+  ARTIFACT_NAME: ${{ github.event.repository.name }}-${{ github.event_name == 'pull_request' && format('pr{0}', github.event.number) || github.ref_name }}
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -20,12 +21,12 @@ jobs:
           for addon in ${{ github.workspace }}/addons/*/; do
             cp --update=none '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE' "$addon"
           done
-          mkdir --parents ${{ github.workspace }}/github-artifact/${{ github.event.repository.name }}-${{ github.sha }}/
-          mv ${{ github.workspace }}/addons/ ${{ github.workspace }}/github-artifact/${{ github.event.repository.name }}-${{ github.sha }}/
+          mkdir --parents ${{ github.workspace }}/github-artifact/${{ env.ARTIFACT_NAME }}/
+          mv ${{ github.workspace }}/addons/ ${{ github.workspace }}/github-artifact/${{ env.ARTIFACT_NAME }}/
       # TODO: Simplify generating artifact names. See: https://github.com/orgs/community/discussions/26686
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.repository.name }}-${{ github.event_name == 'pull_request' && format('pr{0}', github.event.number) || github.ref_name }}
+          name: ${{ env.ARTIFACT_NAME }}
           path: |
             ${{ github.workspace }}/github-artifact
