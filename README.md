@@ -56,10 +56,3 @@ GodotLicensing.add_copyright({
 ## license
 
 This is free and unencumbered software released into the public domain. See [LICENSE](https://github.com/nathanfranke/godot-licensing/blob/main/LICENSE) for details.
-
-## maintenance
-
-```sh
-# create archive
-git archive HEAD --prefix godot-licensing/ --output godot-licensing.zip
-```
