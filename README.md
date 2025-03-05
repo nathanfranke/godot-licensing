@@ -1,4 +1,4 @@
-# godot-licensing by nathanfranke
+# <img src="static/godot-licensing.png" width=20> godot-licensing by nathanfranke
 
 [![Godot Asset Library](https://img.shields.io/badge/download-_?label=Godot%20Asset%20Library&color=blue)](https://godotengine.org/asset-library/asset/1079)
 [![GitHub Release](https://img.shields.io/github/v/release/nathanfranke/godot-licensing)](https://github.com/nathanfranke/godot-licensing/releases/latest)
@@ -53,6 +53,8 @@ GodotLicensing.add_copyright({
 })
 ```
 
-## license
+## copyright
 
-This is free and unencumbered software released into the public domain. See [LICENSE](https://github.com/nathanfranke/godot-licensing/blob/main/LICENSE) for details.
+This is free and unencumbered software released into the public domain. See [LICENSE](LICENSE) for details.
+
+[Paper SVG Vector](https://www.svgrepo.com/svg/155092/paper) by [SVG Repo](https://www.svgrepo.com/) is licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
