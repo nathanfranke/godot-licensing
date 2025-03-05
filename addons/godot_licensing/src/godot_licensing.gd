@@ -1,6 +1,6 @@
 ## [url=https://github.com/nathanfranke/godot-licensing]GodotLicensing[/url] by nathanfranke
 ##
-## Use the [GodotLicensing] singleton to add custom copyrights and licenses (see below).
+## Use the [GodotLicensing] class to add custom copyrights and licenses (see below).
 ## [br]
 ##
 ## Use the [LicensingInterface] node to show all copyrights and licenses to users.

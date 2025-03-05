@@ -6,17 +6,17 @@
 [![GitHub License](https://img.shields.io/github/license/nathanfranke/godot-licensing?color=brightgreen)](https://github.com/nathanfranke/godot-licensing/blob/main/LICENSE)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nathanfranke/godot-licensing/builds.yml)](https://github.com/nathanfranke/godot-licensing/actions)
 
-Adds a preset interface that shows an interactive list of all licenses. Custom licenses can be added through the GodotLicensing singleton.
+Adds a preset interface that shows an interactive list of all licenses. Custom licenses can be added through the GodotLicensing class.
 
 ![example screenshot](https://raw.githubusercontent.com/nathanfranke/godot-licensing/refs/heads/main/static/example.png)
 
-## usage
+## Usage
 
-Use the `GodotLicensing` singleton to add custom copyrights and licenses (see below). \
+Use the `GodotLicensing` class to add custom copyrights and licenses (see below). \
 Use the `LicensingInterface` node to show all copyrights and licenses to users. \
 </x-nul>
 
-## examples
+## Examples
 
 Example copyright with license:
 
@@ -49,7 +49,7 @@ GodotLicensing.add_copyright({
 })
 ```
 
-## copyright
+## Copyright
 
 This is free and unencumbered software released into the public domain. See [LICENSE](LICENSE) for details.
 

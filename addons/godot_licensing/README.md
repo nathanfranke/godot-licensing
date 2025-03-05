@@ -1,4 +1,4 @@
-## copyright
+## Copyright
 
 This is free and unencumbered software released into the public domain. See [LICENSE](LICENSE) for details.
 
