@@ -1,4 +1,4 @@
-# <img src="static/godot-licensing.svg" width=24> godot-licensing by nathanfranke
+# godot-licensing by nathanfranke
 
 [![Godot Asset Library](https://img.shields.io/badge/download-_?label=Godot%20Asset%20Library&color=blue)](https://godotengine.org/asset-library/asset/1079)
 [![GitHub Release](https://img.shields.io/github/v/release/nathanfranke/godot-licensing)](https://github.com/nathanfranke/godot-licensing/releases/latest)
@@ -11,11 +11,12 @@ Adds a preset interface that shows an interactive list of all licenses. Custom l
 ## usage
 
 Use the `GodotLicensing` singleton to add custom copyrights and licenses (see below). \
-Use the `LicensingInterface` node to show all copyrights and licenses to users.
+Use the `LicensingInterface` node to show all copyrights and licenses to users. \
+</x-nul>
 
 **Note**: It is recommended to set `display/window/stretch` such that the full interface shows on all resolutions. For example, set `mode` to `canvas_items` and `aspect` to `stretch`.
 
-**Note**: `LicensingInterface` has a minimum size of `256px` × `256px`.
+**Note**: `LicensingInterface` has a minimum size of `400px` × `400px`.
 
 ## example
 
