@@ -8,6 +8,8 @@
 
 Adds a preset interface that shows an interactive list of all licenses. Custom licenses can be added through the GodotLicensing singleton.
 
+![example screenshot](https://raw.githubusercontent.com/nathanfranke/godot-licensing/refs/heads/main/static/example.png)
+
 ## usage
 
 Use the `GodotLicensing` singleton to add custom copyrights and licenses (see below). \
@@ -16,11 +18,9 @@ Use the `LicensingInterface` node to show all copyrights and licenses to users. 
 
 **Note**: It is recommended to set `display/window/stretch` such that the full interface shows on all resolutions. For example, set `mode` to `canvas_items` and `aspect` to `stretch`.
 
-**Note**: `LicensingInterface` has a minimum size of `400px` × `400px`.
+**Note**: `LicensingInterface` has a minimum size of `256px` × `256px`.
 
-## example
-
-![example screenshot](https://raw.githubusercontent.com/nathanfranke/godot-licensing/refs/heads/main/static/example.png)
+## examples
 
 Example copyright with license:
 

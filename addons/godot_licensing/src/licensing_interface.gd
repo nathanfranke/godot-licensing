@@ -11,7 +11,7 @@ var _licenses_container := TabContainer.new()
 
 # TODO: Avoid hard-coding this. See: https://github.com/godotengine/godot-proposals/issues/7593
 func _get_minimum_size() -> Vector2:
-	return Vector2(400.0, 400.0)
+	return Vector2(256.0, 256.0)
 
 
 func _ready() -> void:
@@ -20,13 +20,17 @@ func _ready() -> void:
 
 
 func _post_ready() -> void:
+	var background := Panel.new()
+	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(background)
+	
 	var tab_container := TabContainer.new()
 	tab_container.add_child(_copyrights_container)
 	tab_container.add_child(_licenses_container)
 	tab_container.set_tab_title(0, "Copyright")
 	tab_container.set_tab_title(1, "Licenses")
-	add_child(tab_container)
 	tab_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(tab_container)
 	
 	var copyrights := GodotLicensing.get_copyrights()
 	for c in copyrights:
