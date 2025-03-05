@@ -1,4 +1,4 @@
-class_name LicenseText
+class_name GodotLicensingText
 extends Resource
 
 

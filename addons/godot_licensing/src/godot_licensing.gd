@@ -55,7 +55,10 @@ static var _custom_licenses := {}
 static func _static_init() -> void:
 	# Some jurisdictions require attribution—even for public domain works.
 	# https://wikipedia.org/wiki/Moral_rights
-	var unlicense := preload("res://addons/godot_licensing/src/unlicense.tres")
+	
+	var unlicense := preload("res://addons/godot_licensing/licenses/unlicense-1.0.tres")
+	var cc0 := preload("res://addons/godot_licensing/licenses/cc0-1.0.tres")
+	
 	_engine_copyrights.push_back({
 		&"name": "GodotLicensing",
 		&"parts": [{
@@ -65,6 +68,17 @@ static func _static_init() -> void:
 	})
 	_engine_licenses.merge({
 		"Unlicense": unlicense.text,
+	})
+	
+	_engine_copyrights.push_back({
+		&"name": "Paper SVG Vector",
+		&"parts": [{
+			&"copyright": ["2025 SVG Repo"],
+			&"license": "CC0-1.0",
+		}]
+	})
+	_engine_licenses.merge({
+		"CC0-1.0": cc0.text,
 	})
 
 
