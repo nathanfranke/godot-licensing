@@ -6,17 +6,22 @@
 [node name="Example" type="Node"]
 script = ExtResource("1_ibgjk")
 
-[node name="Copyright" type="Button" parent="."]
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 139.0
-offset_bottom = 35.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Copyright" type="Button" parent="MarginContainer"]
+layout_mode = 2
 text = "Copyright"
 
 [node name="Window" type="Window" parent="."]
 title = "Copyright"
-position = Vector2i(56, 56)
-size = Vector2i(400, 400)
+initial_position = 1
+size = Vector2i(480, 480)
 
 [node name="LicensingInterface" type="Control" parent="Window"]
 layout_mode = 3
@@ -27,5 +32,5 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_wwplw")
 
-[connection signal="pressed" from="Copyright" to="." method="_on_show_copyrights_pressed"]
+[connection signal="pressed" from="MarginContainer/Copyright" to="." method="_on_show_copyrights_pressed"]
 [connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]

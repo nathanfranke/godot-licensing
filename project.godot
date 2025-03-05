@@ -17,10 +17,7 @@ config/icon="res://static/godot-licensing.svg"
 
 [display]
 
-window/size/viewport_width=512
-window/size/viewport_height=512
-window/size/initial_position=Vector2i(152, 648)
-window/size/window_width_override=512
-window/size/window_height_override=512
+window/size/viewport_width=640
+window/size/viewport_height=640
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
