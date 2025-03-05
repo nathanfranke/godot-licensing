@@ -52,6 +52,22 @@ var _custom_copyrights := []
 var _custom_licenses := {}
 
 
+func _ready() -> void:
+	# Some jurisdictions require attribution—even for public domain works.
+	# https://wikipedia.org/wiki/Moral_rights
+	var unlicense := preload("res://addons/godot_licensing/unlicense.tres")
+	_engine_copyrights.push_back({
+		&"name": "GodotLicensing",
+		&"parts": [{
+			&"copyright": ["2024-2025 nathanfranke"],
+			&"license": "Unlicense",
+		}]
+	})
+	_engine_licenses.merge({
+		"Unlicense": unlicense.text,
+	})
+
+
 ## Adds a copyright. [code]license[/code] is optional. See [GodotLicensing] for usage.
 func add_copyright(copyright: Dictionary) -> void:
 	assert(copyright.has(&"name"), "Expected key: 'name'.")
