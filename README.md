@@ -23,17 +23,17 @@ Example copyright with license:
 
 ```gdscript
 GodotLicensing.add_copyright({
-    &"name": "Example",
-    &"parts": [{
-        &"copyright": [
-            "2024 Example"
-        ],
-        &"license": "Example",
-    }],
+	&"name": "Example",
+	&"parts": [{
+		&"copyright": [
+			"2024 Example"
+		],
+		&"license": "Example",
+	}],
 })
 GodotLicensing.add_license({
-    &"name": "Example",
-    &"text": "Example text",
+	&"name": "Example",
+	&"text": "Example text",
 })
 ```
 
@@ -41,12 +41,12 @@ Example copyright without license:
 
 ```gdscript
 GodotLicensing.add_copyright({
-    &"name": "Example",
-    &"parts": [{
-        &"copyright": [
-            "2024 Example"
-        ],
-    }],
+	&"name": "Example",
+	&"parts": [{
+		&"copyright": [
+			"2024 Example"
+		],
+	}],
 })
 ```
 
