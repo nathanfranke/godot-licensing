@@ -55,7 +55,7 @@ static var _custom_licenses := {}
 static func _static_init() -> void:
 	# Some jurisdictions require attribution—even for public domain works.
 	# https://wikipedia.org/wiki/Moral_rights
-	var unlicense := preload("res://addons/godot_licensing/unlicense.tres")
+	var unlicense := preload("res://addons/godot_licensing/src/unlicense.tres")
 	_engine_copyrights.push_back({
 		&"name": "GodotLicensing",
 		&"parts": [{

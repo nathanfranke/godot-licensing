@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="LicenseText" load_steps=2 format=3 uid="uid://bcsy7xf65u2m6"]
 
-[ext_resource type="Script" path="res://addons/godot_licensing/license_text.gd" id="1_hh8bd"]
+[ext_resource type="Script" path="res://addons/godot_licensing/src/license_text.gd" id="1_hh8bd"]
 
 [resource]
 script = ExtResource("1_hh8bd")
