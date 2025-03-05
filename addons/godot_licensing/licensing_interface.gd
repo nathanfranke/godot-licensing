@@ -11,7 +11,7 @@ var _licenses_container := TabContainer.new()
 
 # TODO: Avoid hard-coding this. See: https://github.com/godotengine/godot-proposals/issues/7593
 func _get_minimum_size() -> Vector2:
-	return Vector2(256.0, 256.0)
+	return Vector2(400.0, 400.0)
 
 
 func _ready() -> void:

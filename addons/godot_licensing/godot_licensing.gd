@@ -9,7 +9,7 @@
 ## [b]Note[/b]: It is recommended to set [code]display/window/stretch[/code] such that the full interface shows on all resolutions. For example, set [code]mode[/code] to [code]canvas_items[/code] and [code]aspect[/code] to [code]stretch[/code].
 ## [br][br]
 ##
-## [b]Note[/b]: [LicensingInterface] has a minimum size of [code]256px[/code] × [code]256px[/code].
+## [b]Note[/b]: [LicensingInterface] has a minimum size of [code]400px[/code] × [code]400px[/code].
 ## [br][br]
 ##
 ## Example copyright with license:
