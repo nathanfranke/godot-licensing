@@ -60,7 +60,7 @@ static func _static_init() -> void:
 	var cc0 := preload("res://addons/godot_licensing/licenses/cc0-1.0.tres")
 	
 	_engine_copyrights.push_back({
-		&"name": "GodotLicensing",
+		&"name": "godot-licensing",
 		&"parts": [{
 			&"copyright": ["2024-2025 nathanfranke"],
 			&"license": "Unlicense",
